@@ -20,7 +20,7 @@ func slowDown(msg string) {
 	words := strings.Split(msg, " ")
 	for _, word := range words {
 		var pw []string
-		for i, char := range []byte(word) {
+		for i, char := range word {
 			rb := strings.Repeat(string(char), i+1)
 			pw = append(pw, rb)
 		}
